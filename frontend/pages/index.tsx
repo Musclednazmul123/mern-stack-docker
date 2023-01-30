@@ -7,13 +7,15 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   
-  fetch('http://localhost:5000/users/home').then((data)=>{
+  const homeapi = fetch('http://localhost:5000/users/home').then((data)=>{
     console.log(data)
     return data
     }).catch((error)=>{
       console.log(error)
       return error
     })
+    console.log('homeapi')
+  console.log(homeapi)
   return (
     <>
       <Head>
