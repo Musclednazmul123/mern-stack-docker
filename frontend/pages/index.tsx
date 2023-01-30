@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   
-  const homeapi = fetch('http://localhost:5000/users/home').then((data)=>{
+  fetch('http://localhost:5000/users/home').then((data)=>{
     console.log(data)
     return data
     }).catch((error)=>{
@@ -15,7 +15,6 @@ export default function Home() {
       return error
     })
     console.log('homeapi')
-  console.log(homeapi)
   return (
     <>
       <Head>
